@@ -24,15 +24,15 @@ For more details, see the brief.
 - Clone this repo.
 
 #### Back-end
-- To connect to the database as 'Admin' or 'Editor', copy the corresponding .env file (sent separately) in the backend folder.
-- Install Nodemon
+- To connect to the database as 'Admin' or 'Editor', copy the corresponding .env file (sent separately) into the backend folder.
+- Install Nodemon.
 - Run 'nodemon server'. The server should run on localhost:3000.
 
 #### Front-end
-- Install Node.js version 14.0 
-- Install Angular CLI version 7.0.2
-- Install node-sass version 4.14
-- Run 'ng serve'
+- Install Node.js version 14.0.
+- Install Angular CLI version 7.0.2.
+- Install node-sass version 4.14.
+- Run 'ng serve'.
 - Go to http://localhost:4200/
 
 

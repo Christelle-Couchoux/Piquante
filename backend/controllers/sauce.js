@@ -37,7 +37,7 @@ exports.createSauce = (req, res, next) => {
     // save new sauce in database
     sauce.save()
         .then(() => res.status(201).json({ message: 'Sauce enregistrée !' }))
-        .catch(error => res.status(400).json({ error }));
+        .catch(error => res.status(400).json({ message: 'Les informations de sauce saisies ne sont pas valides !' }));
 };
 
 // modify a sauce (created by user)

@@ -102,7 +102,7 @@ exports.likeOrDislike = (req, res, next) => {
             } else if (req.body.like == 0) { // if user removes the vote
                 // if user removes a like vote
                 if (sauce.usersLiked.includes(req.body.userId)) {
-                    // fin index of user in usersLiked array
+                    // find index of user in usersLiked array
                     let indexUserLiked = sauce.usersLiked.indexOf(req.body.userId);
                     // remove userId from usersLiked array
                     sauce.usersLiked.splice(indexUserLiked, 1);
@@ -114,7 +114,7 @@ exports.likeOrDislike = (req, res, next) => {
                         .then(() => res.status(200).json({ message: "Like supprimé !" }))
                         .catch(error => res.status(400).json({ error }));
                 } else if (sauce.usersDisliked.includes(req.body.userId)) {
-                    // fin index of user in usersDisliked array
+                    // find index of user in usersDisliked array
                     let indexUserDisliked = sauce.usersDisliked.indexOf(req.body.userId);
                     // remove userId from usersDisliked array
                     sauce.usersDisliked.splice(indexUserDisliked, 1);

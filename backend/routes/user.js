@@ -8,7 +8,7 @@ const limiter = require('../middleware/rateLimit');
 const userCtrl = require('../controllers/user');
 
 // user routes
-router.post('/signup', limiter, verifyPassword, userCtrl.signup);
+router.post('/signup', verifyPassword, userCtrl.signup);
 router.post('/login', limiter, userCtrl.login);
 
 module.exports = router;

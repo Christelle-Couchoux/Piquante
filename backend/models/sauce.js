@@ -16,7 +16,7 @@ const nameValidator = [
     }),
     validate({
       validator: 'matches',
-      arguments: /^[-\w\s]+$/,
+      arguments: /^[-\w\sÀÁÂÄÅÇÈÉÊËÌÍÎÏÑŒÒÓÔÕÖØÙÚÛÜàáâäåçèéêëìíîïñœòóôõöøùúûü]+$/,
       message: 'Le nom de la sauce ne doit pas comprendre de caractères spéciaux.',
     }),
 ]
@@ -29,7 +29,7 @@ const manufacturerValidator = [
     }),
     validate({
       validator: 'matches',
-      arguments: /^[-\w\s]+$/,
+      arguments: /^[-\w\sÀÁÂÄÅÇÈÉÊËÌÍÎÏÑŒÒÓÔÕÖØÙÚÛÜàáâäåçèéêëìíîïñœòóôõöøùúûü]+$/,
       message: 'Le nom du fabriquant ne doit pas comprendre de caractères spéciaux.',
     }),
 ]
@@ -42,7 +42,7 @@ const descriptionValidator = [
     }),
     validate({
       validator: 'matches',
-      arguments: /^[-\w\s]+$/,
+      arguments: /^[-\w\sÀÁÂÄÅÇÈÉÊËÌÍÎÏÑŒÒÓÔÕÖØÙÚÛÜàáâäåçèéêëìíîïñœòóôõöøùúûü]+$/,
       message: 'La description ne doit pas comprendre de caractères spéciaux.',
     }),
 ]
@@ -55,7 +55,7 @@ const pepperValidator = [
     }),
     validate({
       validator: 'matches',
-      arguments: /^[-\w\s]+$/,
+      arguments: /^[-\w\sÀÁÂÄÅÇÈÉÊËÌÍÎÏÑŒÒÓÔÕÖØÙÚÛÜàáâäåçèéêëìíîïñœòóôõöøùúûü]+$/,
       message: 'Le principal ingrédient ne doit pas comprendre de caractères spéciaux.',
     }),
 ]
@@ -63,7 +63,7 @@ const pepperValidator = [
 /* 
 frontend should be updated to reflect that sauce informations need to be valid
 
-- add instructions to signup form
+- add instructions to new sauce form
 for each field :
     length required
     symbols are not allowed

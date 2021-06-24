@@ -5,7 +5,7 @@
 
 ### Aim
 - Build the back-end and API for 'Piquante', a new application from So Pekocko that allows users to like/dislike sauces.
-- Use a server Node.js, the framework Express, the database MongoDB, and the plugin Mongoose. 
+- Use a server Node.js, the framework Express, the database MongoDB, and the plugin Mongoose.
 - The APi should be secured and respect OWASP standards and the GDRP.
 - The front-end server is already built.
 
@@ -15,7 +15,7 @@ For more details, see the brief.
 ### Site structure
 
 - Signup / login page.
-- Home page dsiplaying all the sauces.
+- Home page displaying all the sauces.
 - Page displaying the informations of a specific sauce, with options to like/dislike the sauce.
 - Page to add a new sauce.
 
@@ -36,11 +36,3 @@ For more details, see the brief.
 - Run npm install.
 - Run npm start.
 - Go to http://localhost:4200/
-
-
-
-
-
-
-
-

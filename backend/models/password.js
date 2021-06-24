@@ -10,5 +10,5 @@ passwordSchema
 .has().digits()                                 // Must have at least 1 digit
 .has().symbols()                                // Must have at least 1 symbol
 .has().not().spaces()                           // Should not have spaces
- 
+
 module.exports = passwordSchema;

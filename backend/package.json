@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "OpenClassrooms WebDev P6 application Piquante",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server"

@@ -60,7 +60,7 @@ const pepperValidator = [
     }),
 ]
 
-/* 
+/*
 frontend should be updated to reflect that sauce informations need to be valid
 
 - add instructions to new sauce form
@@ -84,7 +84,7 @@ const sauceSchema = mongoose.Schema({
     likes: { type: Number, default: 0 },
     dislikes: { type: Number, default: 0 },
     usersLiked: { type: [String] },
-    usersDisliked: { type: [String] }, 
+    usersDisliked: { type: [String] },
 });
 
 // sanitize data

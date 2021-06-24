@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 const User = require('../models/user');
 
-// create new user
+// create new user (POST)
 exports.signup = (req, res, next) => {
     // hash password
     bcrypt.hash(req.body.password, 10)
@@ -14,14 +14,14 @@ exports.signup = (req, res, next) => {
                 password: hash
             });
             // save new user in database
-            user.save() 
+            user.save()
             .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))
             .catch(error => res.status(400).json({ error }));
         })
         .catch(error => res.status(500).json({ error }));
 };
 
-// connect existing user
+// connect existing user (POST)
 exports.login = (req, res, next) => {
     // search in database for user with email address that matches
     User.findOne({ email: req.body.email })
@@ -46,7 +46,7 @@ exports.login = (req, res, next) => {
                         token: jwt.sign(
                             { userId: user._id }, // data to encrypt
                             'RANDOM_TOKEN_SECRET', // change to more complex key for implementation
-                            { expiresIn: '24h' } 
+                            { expiresIn: '24h' }
                         )
                     });
                 })

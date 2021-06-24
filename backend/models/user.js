@@ -8,13 +8,13 @@ const sanitize= require('mongoose-sanitizer-plugin');
 // create schema for users
 const userSchema = mongoose.Schema({
     email: {
-        type: String, 
-        required: true, 
-        unique: true, 
+        type: String,
+        required: true,
+        unique: true,
         match: [/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/, "Veuillez saisir une adresse email valide."]
     },
-    password: { 
-        type: String, 
+    password: {
+        type: String,
         required: true
     }
 });

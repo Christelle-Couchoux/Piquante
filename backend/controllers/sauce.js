@@ -63,6 +63,28 @@ exports.modifySauce = (req, res, next) => {
         .catch(error => res.status(500).json({ error }));
 };
 
+/*
+This method follows guidelines regarding wether there is an image in request or not
+BUT there is ALWAYS an image in the request, even if it hasn't been modified.
+The whole form is sent in the request, not just the updated fields.
+Also, the old image should be removed from the images folder.
+
+// modify a sauce (created by user) (PUT)
+exports.modifySauce = (req, res, next) => {
+    // is there a file in the request?
+    const sauceObject = req.file ?
+      // if there is an image file
+      {
+        ...JSON.parse(req.body.sauce),
+        imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+      } : { ...req.body }; // if there is no image file
+      // update sauce with specific id
+      Sauce.updateOne({ _id: req.params.id }, { ...sauceObject, _id: req.params.id }) // ({object to modify}, {new object})
+        .then(() => res.status(200).json({ message: 'Sauce modifiée !'}))
+        .catch(error => res.status(400).json({ error }));
+};
+*/
+
 // remove a sauce (created by user) (DELETE)
 exports.deleteSauce = (req, res, next) => {
     // get sauce with specific id

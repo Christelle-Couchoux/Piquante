@@ -1,6 +1,6 @@
 # Piquante
 
-## OpenClassrooms - Web Developper path - Project 6
+## OpenClassrooms - Web Developer path - Project 6
 
 
 ### Aim
@@ -24,7 +24,7 @@ For more details, see the brief.
 - Clone this repo.
 
 #### Back-end
-- To connect to the database as 'Admin' or 'Editor', copy the corresponding .env file (sent separately) into the 'backend' folder.
+- To connect to the database, go to the env_files folder, choose 'Admin' or 'Editor', fill in the variables in the .env file, and copy the .env file into the 'backend' folder.
 - Install nodemon.
 - Run npm install.
 - Run npm start. The server should run on localhost:3000.
